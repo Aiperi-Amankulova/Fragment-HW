@@ -26,12 +26,14 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         when (view?.id){
             R.id.btnHttps-> {
                 Links("Вы открыли барузер")
-
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://$web"))
+                startActivity(intent)
             }
 
             R.id.btnNumber -> {
                 Number("Вы открыли набор номера")
-
+                val intent=Intent(Intent.ACTION_DIAL, Uri.parse("tel: $phone"))
+                startActivity(intent)
             }
         }
     }
