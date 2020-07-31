@@ -16,5 +16,23 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
         btnHttps.setOnClickListener(this)
         btnNumber.setOnClickListener(this)
-    } 
+    }
+
+
+    override fun onClick(view: View?) {
+        val web = etHttps.text.toString()
+        val phone =etNumber.text.toString()
+
+        when (view?.id){
+            R.id.btnHttps-> {
+                Links("Вы открыли барузер")
+
+            }
+
+            R.id.btnNumber -> {
+                Number("Вы открыли набор номера")
+
+            }
+        }
+    }
 }
